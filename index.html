@@ -10,13 +10,29 @@
 <body>
     <nav>
         <div><button id="hsbutton">View High Scores</button></div>
-        <span id="timer">timer</span>
+        <span id="timer"></span>
     </nav>
 
     <main>
-        <div id="container">
-            <div id="question-display">Entry text here</div>
-            <div id="answer-display"><input id="startButton" type="button" value="button"></div>
+        <div id="start-container">
+            <h1>Javascript Code Challenge</h1>
+            <div>Try to answer  the following code-related questions within the time limit. Keep in mind incorrect answers will penalize your score by 10 seconds.</div>
+            <div><button id="startButton">Start Quiz</button></div>
+        </div>
+        <div id="quiz-container" class="hidden">
+            <div id="question-display"></div>
+            <div id="answer-display"></div>
+            <div id="last-answer"></div>
+        </div>
+        <div id="score-container" class="hidden">
+            <label for="initials">Enter your Initials</label>
+            <input type="text" id="initials" placeholder="Enter your initials">
+            <span id="score"></span>
+            <button id="save">Save Score</button>
+        </div>
+        <div id="high-scores-container" class="hidden">
+            <div id="high-scores">high scores</div>
+            <button id="return">Return</button><button id="reset">Reset Scores</button>
         </div>
     </main>
 
