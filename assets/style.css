@@ -14,8 +14,43 @@ nav {
 }
 
 main {
-    width: 500px;
+    padding: 10px;
+    margin: 100px;
     text-align: center;
+}
+
+h1, h4 {
+    font-size: 200%;
+}
+
+h2 {
+    font-size: 150%;
+}
+
+h3 {
+    font-size: 125%;
+}
+button {
+    border-radius: 15px;
+    font-size: 20px;
+    background-color: darkred;
+    color: white;
+}
+
+.ans-btns {
+    display: flex;
+    flex-direction: column;
+}
+
+#last-answer {
+    border-top: 1px solid gray;
+    font-size: larger;
+    font-style: italic;
+    text-align: left;
+}
+
+.ans-btn {
+    width: fit-content;
 }
 
 .hidden {

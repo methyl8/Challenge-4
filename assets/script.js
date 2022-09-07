@@ -37,7 +37,7 @@ var score = {
 function startTimer() {
     timer = setInterval(function () {
             if(timeLeft > 0) {
-                document.getElementById("timer").textContent = timeLeft;
+                document.getElementById("timer").textContent = `Time remaining ${timeLeft}`;
                 timeLeft--;
             }
             else {
@@ -63,13 +63,16 @@ function nextQuestion() {
     var aArea = document.getElementById("answer-display");
     var aButton = "";
 
+    //clear last question/answers
     qArea.innerHTML = "";
     aArea.innerHTML = "";
 
+    //create answer buttons
     qArea.textContent = qArray[qIndex].question
     for(var i=0;i<qArray[qIndex].answers.length;i++) {
         aButton = document.createElement("button")
         aButton.setAttribute("data-status", qArray[qIndex].answerStatus[i])
+        aButton.setAttribute("class", "ans-btn")
         aButton.textContent = qArray[qIndex].answers[i]
         aArea.appendChild(aButton)
     }
@@ -137,8 +140,8 @@ function displayHighScores() {
     }
     else {
         for(var i=0;i<scores.length;i++) {
-            var newHS = document.createElement("div")
-            newHS.textContent = scores[i].who + "  " + scores[i].value;
+            var newHS = document.createElement("h3")
+            newHS.textContent = `${scores[i].who} ${scores[i].value}`;
             hsDiv.appendChild(newHS)
         }
     }
@@ -152,6 +155,7 @@ function resetScreen() {
     score.who = ""
     score.value = 0;
     document.getElementById("initials").value = ""
+    document.getElementById("last-answer").textContent = ""
     hideAll();
     document.getElementById("start-container").setAttribute("class", "show");
     document.getElementById("hsbutton").setAttribute("class", "show");

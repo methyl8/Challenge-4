@@ -14,24 +14,29 @@
     </nav>
 
     <main>
+        <!-- starting screen -->
         <div id="start-container">
             <h1>Javascript Code Challenge</h1>
             <div>Try to answer  the following code-related questions within the time limit. Keep in mind incorrect answers will penalize your score by 10 seconds.</div>
             <div><button id="startButton">Start Quiz</button></div>
         </div>
+        <!-- quiz screen -->
         <div id="quiz-container" class="hidden">
-            <div id="question-display"></div>
-            <div id="answer-display"></div>
+            <h2 id="question-display"></h2>
+            <div id="answer-display" class="ans-btns"></div>
             <div id="last-answer"></div>
         </div>
+        <!-- enter score -->
         <div id="score-container" class="hidden">
-            <label for="initials">Enter your Initials</label>
-            <input type="text" id="initials" placeholder="Enter your initials">
-            <span id="score"></span>
+            <h3>Final Score: <span id="score"></span></h3>
+            <h3><label for="initials">Enter your Initials:</label>
+            <input type="text" id="initials" placeholder="Enter your initials"></h3>
             <button id="save">Save Score</button>
         </div>
+        <!-- display all scores -->
         <div id="high-scores-container" class="hidden">
-            <div id="high-scores">high scores</div>
+            <h4>High Scores</h4>
+            <div id="high-scores"></div>
             <button id="return">Return</button><button id="reset">Reset Scores</button>
         </div>
     </main>
