@@ -15,9 +15,12 @@ Current score will be tracked in local storage item "scores".  All previous scor
 ## Screenshots
     Start
 ![Start Screen](/screenshots/start.png?raw=true)
+
     Question
 ![Sample Question](/screenshots/sample-question.png?raw=true)
+
     Save Score
 ![Save Score](/screenshots/enter.png?raw=true)
-High Scores
+
+    High Scores
 ![High Scores](/screenshots/highscores.png?raw=true)
