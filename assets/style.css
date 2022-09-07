@@ -30,12 +30,17 @@ h2 {
 h3 {
     font-size: 125%;
 }
+
 button {
     border-radius: 15px;
     font-size: 20px;
     background-color: darkred;
     color: white;
 }
+
+ button:hover {
+    background-color: red;
+ }
 
 .ans-btns {
     display: flex;
